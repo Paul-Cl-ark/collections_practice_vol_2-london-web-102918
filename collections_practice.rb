@@ -29,7 +29,7 @@ end
 
 def merge_data(keys, data)
   
-  merged_data = keys.map {|hash| data.first.map {|k,v| if hash.values.first == k then hash.merge(v) end}}
+  merged_data = keys.map {|hash| data.first.map {|k,v| if hash.values.first == k then hash.merge(v) end}.compact.first}
     
 end
 
